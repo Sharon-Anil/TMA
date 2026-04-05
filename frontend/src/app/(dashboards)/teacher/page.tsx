@@ -9,7 +9,7 @@ import {
   FiArrowRight, FiPlay, FiAlertCircle, FiClock, FiUsers, FiChevronDown
 } from 'react-icons/fi';
 
-const API = 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
 
 interface Video {
   _id: string;

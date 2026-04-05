@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { FiUser, FiLock, FiBook, FiHash, FiLogIn, FiUserPlus, FiEye, FiEyeOff, FiAlertCircle, FiCheck, FiArrowLeft } from 'react-icons/fi';
 
-const API = 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
 const BRANCHES = ['HSE Engineering', 'General Duty Assistant', 'Hospital Administration', 'Ethical Hacking', 'SOC Analyst'];
 
 export default function TeacherAuthPage() {

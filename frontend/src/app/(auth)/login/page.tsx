@@ -22,7 +22,8 @@ export default function LoginPage() {
 
     try {
         // 1. Login against Node.js to get stored face descriptor
-        const res = await fetch('http://localhost:5000/api/auth/login', {
+        const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+        const res = await fetch(`${API}/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
